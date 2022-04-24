@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode=development",
+    "save": "git add . && git commit -m save && git push",
     "build": "webpack --mode=production"
   },
   "repository": {
@@ -198,6 +199,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.17.9",
+    "prop-types": "^15.8.1",
     "yargs": "^17.4.0"
   }
 }
