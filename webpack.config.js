@@ -21,7 +21,7 @@ module.exports = {
             extractComments: false,
             terserOptions: {
                 compress: {
-                    drop_console: true,
+                    drop_console: true
                 }
             }
         })]
@@ -29,17 +29,22 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js(x?)$/,
+                test: /\.(j|t)s(x?)$/,
                 enforce: 'pre',
-                use: ['source-map-loader'],
+                use: ['source-map-loader']
             },
             {
-                test: /\.js(x?)$/,
+                test: /\.(j|t)s(x?)$/,
                 exclude: [/node_modules/],
                 loader: 'babel-loader',
                 options: {
                     presets: ['@babel/preset-env']
                 }
+            },
+            {
+                test: /\.ts(x?)$/,
+                exclude: [/node_modules/],
+                loader: 'ts-loader'
             },
             {
                 test: /\.(s(a|c)ss|styl|stylus|css)$/,
@@ -78,10 +83,12 @@ module.exports = {
     resolve: {
         extensions: [
             '.js',
-            '.jsx'
+            '.jsx',
+            '.ts',
+            '.tsx'
         ],
         alias: {
-            '@': path.resolve(__dirname, './src/components'),
+            '@': path.resolve(__dirname, './src/components')
         }
     },
     plugins: [
@@ -95,8 +102,6 @@ module.exports = {
         compress: false,
         port: argv.PORT || 3003,
         hot: true,
-        historyApiFallback: {
-            index: 'index.html'
-        }
+        historyApiFallback: true
     }
-};
+}
