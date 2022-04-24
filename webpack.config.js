@@ -100,7 +100,7 @@ module.exports = {
     devServer: {
         static: ['public'],
         compress: false,
-        port: argv.PORT || 3003,
+        port: argv.PORT || 3001,
         hot: true,
         historyApiFallback: true
     }
