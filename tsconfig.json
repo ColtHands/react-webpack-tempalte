@@ -1,9 +1,13 @@
 {
     "compilerOptions": {
+        // "module": "commonjs",
+        // "outDir": "dist",
         "jsx": "react",
         "sourceMap": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true
+        // "lib": ["ESNext", "dom"]
     },
-    "include": ["./src/**/*.tsx"]
+    "include": ["./src/**/*.tsx", "./src/**/*.ts"],
+    "exclude": ["node_modules"]
 }

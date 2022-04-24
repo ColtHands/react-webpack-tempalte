@@ -1,7 +1,8 @@
 import { createRoot } from 'react-dom/client'
 import React from 'react'
-// @ts-ignore
 import { App } from '@/App.tsx'
+
+console.log('hello world')
 
 createRoot(document.getElementById('app-root'))
     .render(<App/>)
