@@ -2,7 +2,8 @@
     "compilerOptions": {
         "jsx": "react",
         "sourceMap": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true
     },
     "include": ["./src/**/*.tsx"]
 }
