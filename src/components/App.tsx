@@ -1,3 +1,3 @@
 import React from 'react'
 
-export const App = ():number => <h1>Hello World 2</h1>
+export const App = () => <h1>Hello World 2</h1>
