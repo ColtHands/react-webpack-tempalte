@@ -44,7 +44,10 @@ module.exports = {
             {
                 test: /\.ts(x?)$/,
                 exclude: [/node_modules/],
-                loader: 'ts-loader'
+                loader: 'ts-loader',
+                options: {
+                    compiler: 'typescript-without-2691'
+                }
             },
             {
                 test: /\.(s(a|c)ss|styl|stylus|css)$/,
