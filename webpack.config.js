@@ -46,7 +46,7 @@ module.exports = {
                 exclude: [/node_modules/],
                 loader: 'ts-loader',
                 options: {
-                    compiler: 'typescript-without-2691'
+                    compiler: '@coldhands/typescript'
                 }
             },
             {
