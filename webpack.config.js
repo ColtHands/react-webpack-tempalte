@@ -96,9 +96,7 @@ module.exports = {
         }
     },
     plugins: [
-        new ESLintPlugin({
-            extensions: ['ts']
-        }),
+        new ESLintPlugin(),
         new HtmlWebpackPlugin({
             template: 'public/index.html'
         })
