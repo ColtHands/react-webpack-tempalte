@@ -8,9 +8,9 @@ const ESLintPlugin = require('eslint-webpack-plugin')
 const minimize = argv.mode == 'production'
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/index.ts',
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, './public'),
         filename: './bundle.js',
         libraryTarget: 'umd'
     },
@@ -91,11 +91,14 @@ module.exports = {
             '.tsx'
         ],
         alias: {
-            '@': path.resolve(__dirname, './src/components')
+            '@': path.resolve(__dirname, './src'),
+            '$': path.resolve(__dirname, './src/components')
         }
     },
     plugins: [
-        new ESLintPlugin(),
+        new ESLintPlugin({
+            extensions: ['ts']
+        }),
         new HtmlWebpackPlugin({
             template: 'public/index.html'
         })

@@ -45,13 +45,17 @@
     ]
   },
   "eslintConfig": {
-    "parser": "@babel/eslint-parser",
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
     "parserOptions": {
       "ecmaVersion": 2020
     },
     "extends": [
       "eslint:recommended",
-      "plugin:react/recommended"
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended"
     ],
     "env": {
       "browser": true,
@@ -166,7 +170,16 @@
           "functions": "never"
         }
       ]
-    }
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.ts",
+          "*.tsx"
+        ],
+        "parser": "@typescript-eslint/parser"
+      }
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
@@ -182,6 +195,7 @@
     "@babel/preset-react": "^7.16.7",
     "@coldhands/typescript": "^4.7.0",
     "@types/react": "^18.0.6",
+    "@types/react-dom": "^18.0.3",
     "babel-loader": "^8.2.4",
     "css-loader": "^6.7.1",
     "eslint-plugin-react": "^7.29.4",
@@ -202,6 +216,14 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.17.9",
+    "@reduxjs/toolkit": "^1.8.1",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "@typescript-eslint/scope-manager": "^5.22.0",
+    "@typescript-eslint/typescript-estree": "^5.22.0",
+    "@typescript-eslint/utils": "^5.22.0",
+    "eslint": "^8.14.0",
     "prop-types": "^15.8.1",
     "yargs": "^17.4.0"
   }

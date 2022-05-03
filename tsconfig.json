@@ -2,11 +2,16 @@
     "compilerOptions": {
         // "module": "commonjs",
         // "outDir": "dist",
+        "strict": true,
         "jsx": "react",
         "sourceMap": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "paths": {
+            "@": ["./src"],
+            "$": ["./src/components"]
+        }
         // "lib": ["ESNext", "dom"]
     },
     "include": ["./src/**/*.tsx", "./src/**/*.ts"],
