@@ -46,9 +46,6 @@
   },
   "eslintConfig": {
     "parser": "@babel/eslint-parser",
-    "plugins": [
-      "@typescript-eslint"
-    ],
     "parserOptions": {
       "ecmaVersion": 2020
     },
@@ -168,16 +165,7 @@
           "functions": "never"
         }
       ]
-    },
-    "overrides": [
-      {
-        "files": [
-          "*.ts",
-          "*.tsx"
-        ],
-        "parser": "@typescript-eslint/parser"
-      }
-    ]
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
@@ -218,6 +206,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "axios": "^0.27.2",
+    "eslint": "^8.14.0",
     "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
